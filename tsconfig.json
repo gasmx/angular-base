@@ -21,11 +21,11 @@
     */
     "baseUrl": ".", // Utilizado pelo atributo paths como caminho relativo
     "paths": {
-      "classes/*": [ // Nome do alias (glob pattern => 'alias/*')
-        "app/ts/classes/*" // Diretório correspondente ao alias
+      "models": [ // Nome do alias
+        "app/ts/models/model.ts" // Arquivo correspondente ao alias
       ],
-      "default/*": [
-        "app/ts/default/*"
+      "default/*": [ // Nome do alias (glob pattern => 'alias/*')
+        "app/ts/default/*" // Diretório correspondente ao alias
       ],
       "config/*": [
         "app/ts/*"

@@ -1,7 +1,7 @@
 {
   "name": "angular-base",
-  "description": "Estrutura base para a criação de novos projetos Angular 2 utilizando a estratégia de carregamento de módulos da lib SystemJS",
-  "version": "0.0.1",
+  "description": "Estrutura base para a criação de novos projetos Angular utilizando a estratégia de carregamento de módulos da lib SystemJS",
+  "version": "0.0.2",
   "license": "ISC",
   "dependencies": {
     "@angular/common": "4.1.3",

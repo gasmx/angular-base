@@ -12,6 +12,5 @@ export class AppComponent {
 
     constructor(_config: AppConfig) {
         this.config = _config;
-        console.log(new Person("Gabriel Angelus", 21, "gangeluscf@gmail.com"));
     }
 }

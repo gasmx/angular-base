@@ -1,11 +1,11 @@
 export class Person {
     name: string;
-    age: number;
+    age: string;
     email: string;
 
     constructor(
         name: string,
-        age: number,
+        age: string,
         email?: string
     ) {
         this.name = name;

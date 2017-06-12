@@ -24,6 +24,9 @@
       "model": [ // Nome do alias
         "app/ts/model.ts" // Arquivo correspondente ao alias
       ],
+      "service": [ // Nome do alias
+        "app/ts/service.ts" // Arquivo correspondente ao alias
+      ],
       "default/*": [ // Nome do alias (glob pattern => 'alias/*')
         "app/ts/default/*" // Diretório correspondente ao alias
       ],

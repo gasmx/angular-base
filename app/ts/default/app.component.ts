@@ -1,10 +1,10 @@
 import { Component } from '@angular/core'
 import { AppConfig, dir } from 'default/app.config';
-import { Person } from 'models';
+import { Person } from 'model';
 
 @Component({
     selector: 'my-app',
-    templateUrl: dir('/default/app.component.html')
+    templateUrl: dir('/default/app.template.html')
 })
 
 export class AppComponent {

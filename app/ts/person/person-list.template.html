@@ -1,0 +1,9 @@
+<h2>Person list ({{mode}})</h2>
+
+<ul>
+  <li *ngFor="let person of persons">{{person.name}}</li>
+</ul>
+<br>
+<label>New person name: <input #newPersonName /></label>
+<button (click)="addHero(newPersonName.value); newPersonName.value=''">Add person</button>
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>

@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 
-import { AppComponent } from 'default/app.component';
-import { AppConfig } from 'default/app.config';
+import { AppConfig } from './default/app.config';
+import { AppComponent } from './default/app.component';
+import { PersonListComponent } from './person/person-list.component';
 
 @NgModule({
-  declarations:   [ AppComponent ],
+  declarations:   [ AppComponent, PersonListComponent ],
   bootstrap:      [ AppComponent ],
-  imports:        [ BrowserModule ],
+  imports:        [ BrowserModule, HttpModule ],
   providers:      [ AppConfig ]
 })
 

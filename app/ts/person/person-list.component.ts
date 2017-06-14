@@ -1,39 +1,55 @@
 import { Component } from '@angular/core'
-import { NgForm } from '@angular/forms';
 
-import { dir } from 'default/app.config'
 import { Person } from 'model'
 import { PersonService } from 'service'
+import { dir } from 'default/app.config'
 
 @Component({
     selector: 'person-list',
-    templateUrl: dir('/person/person-list.template.html')
+    templateUrl: dir('/person/person-list.template.html'),
 })
 
 export class PersonListComponent {
+    personService: PersonService;
+
     mode: string = 'Observable'
     errorMessage: string;
-    persons: Array<Person>;
-    personService: PersonService;
+    submitted: boolean = false;
+
+    personTypes: Array<String> = [];
+    personList: Array<Person> = [];
+    person: Person = new Person;
 
     constructor(_personService: PersonService) {
         this.personService = _personService;
     }
 
     ngOnInit() {
+        this.getTypes();
         this.getPersons();
+    }
+
+    getTypes() {
+        this.personService.getTypes()
+                          .map(type => this.personTypes.push(type));
     }
 
     getPersons() {
         this.personService.getPersons()
                         .subscribe(
-                            persons => this.persons = persons,
+                            persons => this.personList = persons,
                             error =>  this.errorMessage = <any>error
                         );
     }
 
-    addPerson(f: NgForm) {
-        this.persons.push(new Person(f.value.name, f.value.age, f.value.email));
-        // FAZER ISSO COM O TWO WAY DATA BINDING PARA PODER LIMPAR OS CAMPOS DO FORM
+    newPerson() {
+        let newPerson = new Person(
+            this.person.name,
+            this.person.age,
+            this.person.type
+        );
+
+        this.personList.push(newPerson);
+        console.log(this.personList);
     }
 }

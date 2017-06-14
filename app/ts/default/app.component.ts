@@ -1,16 +1,19 @@
 import { Component } from '@angular/core'
-import { AppConfig, dir } from 'default/app.config';
+
+import { AppService } from 'service'
 import { Person } from 'model';
+import { dir } from 'default/app.config';
 
 @Component({
     selector: 'my-app',
-    templateUrl: dir('/default/app.template.html')
+    templateUrl: dir('/default/app.template.html'),        
+    styleUrls: [dir('/default/app.styles.css')]
 })
 
 export class AppComponent {
-    config: AppConfig;
+    config: AppService;
 
-    constructor(_config: AppConfig) {
+    constructor(_config: AppService) {
         this.config = _config;
     }
 }

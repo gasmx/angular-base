@@ -3,13 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule }   from '@angular/forms';
 
-import { AppConfig } from './default/app.config';
 import { AppComponent } from './default/app.component';
 import { PersonListComponent } from './person/person-list.component';
-import { PersonService } from 'service';
+import { AppService, PersonService } from 'service';
 
 @NgModule({
-    imports: [
+  imports: [
     BrowserModule,
     HttpModule,
     FormsModule
@@ -18,8 +17,8 @@ import { PersonService } from 'service';
     AppComponent,
     PersonListComponent
   ],
-    providers: [
-    AppConfig,
+  providers: [
+    AppService,
     PersonService
   ],
   bootstrap: [ AppComponent ]

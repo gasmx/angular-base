@@ -1,15 +1,13 @@
 export class Person {
-    name: string;
-    age: string;
-    email: string;
-
     constructor(
-        name: string,
-        age: string,
-        email?: string
+        public name?: string,
+        public age?: string | number,
+        public type?: string
     ) {
-        this.name = name;
-        this.age = age;
-        this.email = email;
+        if (!name) {
+            this.name = '';
+            this.age = '';
+            this.type = '';
+        }
     }
 }

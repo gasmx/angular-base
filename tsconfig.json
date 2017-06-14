@@ -30,7 +30,7 @@
       "default/*": [ // Nome do alias (glob pattern => 'alias/*')
         "app/ts/default/*" // Diretório correspondente ao alias
       ],
-      "config/*": [
+      "application/*": [
         "app/ts/*"
       ]
     }
